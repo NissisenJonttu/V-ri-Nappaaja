@@ -1,7 +1,10 @@
 let currentScore = 0;
 
+let highscore = 0;
+
 const gameOverElement = document.getElementById('game-over')
 
+const highscoreSpanElement = document.getElementById('highscore')
 const scoreSpanElement = document.getElementById('score')
 
 const square1Element = document.querySelector('.square-1');
