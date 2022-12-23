@@ -1,21 +1,22 @@
 function startNewGame() {
-  gameOver = false;
 
   resetGame();
 
-  
+  scoreSpanElement.textContent = currentScore;
 
   myLoop();
 
 
 
-  console.log("Gameover from startgame= " + gameOver);
+  console.log("startNewGame function over")
 }
 
 
 function catchColor(event) {
   const selectedElement = event.target;
-  if (selectedElement.classList.contains("clicked")) {
+  if(selectedElement.classList.contains("game-is-over")){
+    return;
+  } else if (selectedElement.classList.contains("clicked")) {
     return;
   } else {
     currentScore++;
@@ -26,117 +27,112 @@ function catchColor(event) {
     
   }
 
+  scoreSpanElement.textContent = currentScore;
   console.log("Score= " + currentScore);
 }
 
 function changeColor1() {
-  square1Element.style.backgroundColor = "red";
+  square1Element.style.backgroundColor = randomRGB();
   square1Element.classList.remove("clicked");
   square1Element.classList.add("change");
   
 }
 
 function changeColor2() {
-  square2Element.style.backgroundColor = "red";
+  square2Element.style.backgroundColor = randomRGB();
   square2Element.classList.remove("clicked");
   square2Element.classList.add("change");
   
 }
 
 function changeColor3() {
-  square3Element.style.backgroundColor = "red";
+  square3Element.style.backgroundColor = randomRGB();
   square3Element.classList.remove("clicked");
   square3Element.classList.add("change");
   
 }
 
 function changeColor4() {
-  square4Element.style.backgroundColor = "red";
+  square4Element.style.backgroundColor = randomRGB();
   square4Element.classList.remove("clicked");
   square4Element.classList.add("change");
   
 }
 
 function changeColor5() {
-  square5Element.style.backgroundColor = "red";
+  square5Element.style.backgroundColor = randomRGB();
   square5Element.classList.remove("clicked");
   square5Element.classList.add("change");
   
 }
 
 function changeColor6() {
-  square6Element.style.backgroundColor = "red";
+  square6Element.style.backgroundColor = randomRGB();
   square6Element.classList.remove("clicked");
   square6Element.classList.add("change");
   
 }
 
 function changeColor7() {
-  square7Element.style.backgroundColor = "red";
+  square7Element.style.backgroundColor = randomRGB();
   square7Element.classList.remove("clicked");
   square7Element.classList.add("change");
   
 }
 
 function changeColor8() {
-  square8Element.style.backgroundColor = "red";
+  square8Element.style.backgroundColor = randomRGB();
   square8Element.classList.remove("clicked");
   square8Element.classList.add("change");
   
 }
 
 function changeColor9() {
-  square9Element.style.backgroundColor = "red";
+  square9Element.style.backgroundColor = randomRGB();
   square9Element.classList.remove("clicked");
   square9Element.classList.add("change");
   
 }
 
-function checkIfLostGame() {
-  if (
-    square1Element.classList.contains("change") &&
-    square2Element.classList.contains("change") &&
-    square3Element.classList.contains("change") &&
-    square4Element.classList.contains("change") &&
-    square5Element.classList.contains("change") &&
-    square6Element.classList.contains("change") &&
-    square7Element.classList.contains("change") &&
-    square8Element.classList.contains("change") &&
-    square9Element.classList.contains("change")
-  ) {
-    gameOver = true;
-    console.log("gameOver from function = " + gameOver);
-    return gameOver;
-  }
-}
 
 function resetGame() {
+  square1Element.classList.remove("game-is-over");
   square1Element.classList.add("clicked");
   square1Element.style.backgroundColor = "rgb(243, 227, 255)";
 
+  square2Element.classList.remove("game-is-over");
   square2Element.classList.add("clicked");
   square2Element.style.backgroundColor = "rgb(243, 227, 255)";
 
+  square3Element.classList.remove("game-is-over");
   square3Element.classList.add("clicked");
   square3Element.style.backgroundColor = "rgb(243, 227, 255)";
 
+  square4Element.classList.remove("game-is-over");
   square4Element.classList.add("clicked");
   square4Element.style.backgroundColor = "rgb(243, 227, 255)";
 
+  square5Element.classList.remove("game-is-over");
   square5Element.classList.add("clicked");
   square5Element.style.backgroundColor = "rgb(243, 227, 255)";
 
+  square6Element.classList.remove("game-is-over");
   square6Element.classList.add("clicked");
   square6Element.style.backgroundColor = "rgb(243, 227, 255)";
 
+  square7Element.classList.remove("game-is-over");
   square7Element.classList.add("clicked");
   square7Element.style.backgroundColor = "rgb(243, 227, 255)";
 
+  square8Element.classList.remove("game-is-over");
   square8Element.classList.add("clicked");
   square8Element.style.backgroundColor = "rgb(243, 227, 255)";
 
+  square9Element.classList.remove("game-is-over");
   square9Element.classList.add("clicked");
   square9Element.style.backgroundColor = "rgb(243, 227, 255)";
+
+  gameOverElement.style.display = 'none';
 
   currentScore = 0;
 }
@@ -177,10 +173,35 @@ function myLoop() {         //  create a loop function
     square9Element.classList.contains("clicked")){           //  if the counter < 10, call the loop function
       myLoop();             //  ..  again which will trigger another 
     }else if(true){
+      gameIsOver()
       console.log("Loop ends")
       return
     }                    //  ..  setTimeout()
-  }, 3000)
+  }, 1500)
   
 }
 
+function randomRGB() {
+  let rndRGBValue1 = Math.floor(Math.random() * 255);
+  let rndRGBValue2 = Math.floor(Math.random() * 255);
+  let rndRGBValue3 = Math.floor(Math.random() * 255);
+
+  let rndRGBString = "rgb("+rndRGBValue1.toString()+","+rndRGBValue2.toString()+","+rndRGBValue3.toString()+")"
+
+  return rndRGBString
+}
+
+function gameIsOver() {
+
+    gameOverElement.style.display = 'block';
+
+    square1Element.classList.add("game-is-over");
+    square2Element.classList.add("game-is-over");
+    square3Element.classList.add("game-is-over");
+    square4Element.classList.add("game-is-over");
+    square5Element.classList.add("game-is-over");
+    square6Element.classList.add("game-is-over");
+    square7Element.classList.add("game-is-over");
+    square8Element.classList.add("game-is-over");
+    square9Element.classList.add("game-is-over");
+}

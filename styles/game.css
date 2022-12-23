@@ -8,7 +8,7 @@
     border-radius: 6px;
     color: white;
     text-align: center;
-    /* display: none; */
+    display: none;
 }
 
 #game-over h2 {
@@ -78,4 +78,8 @@ li.clicked {
 
 li.change {
     color:brown;
+}
+
+li.game-is-over {
+    color: aqua;
 }
