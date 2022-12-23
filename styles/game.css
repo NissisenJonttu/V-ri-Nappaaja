@@ -1,0 +1,81 @@
+#game-over {
+    width: 90%;
+    max-width: 40rem;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    background-color: rgb(34, 57, 159);;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    /* display: none; */
+}
+
+#game-over h2 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+
+}
+
+.game-board {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    grid-template-rows: 10rem 10rem 10rem;
+    justify-content: center;
+    gap: 0.5rem;
+
+}
+
+.game-board li {
+    /* background-color: rgb(243, 227, 255); */
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.game-board li:hover {
+    background-color: rgb(152, 79, 198);
+}
+
+.square-1 {
+    background-color: rgb(243, 227, 255);
+}
+.square-2 {
+    background-color: rgb(243, 227, 255);
+}
+.square-3 {
+    background-color: rgb(243, 227, 255);
+}
+.square-4 {
+    background-color: rgb(243, 227, 255);
+}
+.square-5 {
+    background-color:rgb(243, 227, 255);
+}
+.square-6 {
+    background-color: rgb(243, 227, 255);
+}
+.square-7 {
+    background-color: rgb(243, 227, 255);
+}
+.square-8 {
+    background-color: rgb(243, 227, 255);
+}
+.square-9 {
+    background-color: rgb(243, 227, 255);
+}
+
+li.clicked {
+    color: rgb(34, 57, 159);
+}
+
+li.change {
+    color:brown;
+}

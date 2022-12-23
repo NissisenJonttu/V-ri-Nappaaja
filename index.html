@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/game.css" />
+    <script src="/scripts/config.js" defer></script>
+    <script src="/scripts/game.js" defer></script>
+    <script src="/scripts/app.js" defer></script>
+    <title>Väri Nappaaja</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1>VÄRI NAPPAAJA</h1>
+      <p>Nappaa värit nopeasti!</p>
+    </header>
+    <section id="game-over">
+        <h2>Peli päättyi! Tuloksesi oli <span id="score">0</span>!</h2>
+    </section>
+    <section id="game-section">
+        <h2>Pisteet: <span id="show-score">0</span></h2>
+        <ol class="game-board">
+            <li class="square-1 clicked" ></li>
+            <li class="square-2 clicked" ></li>
+            <li class="square-3 clicked" ></li>
+
+            <li class="square-4 clicked" ></li>
+            <li class="square-5 clicked" ></li>
+            <li class="square-6 clicked" ></li>
+
+            <li class="square-7 clicked" ></li>
+            <li class="square-8 clicked" ></li>
+            <li class="square-9 clicked" ></li>
+        </ol>
+        <button class="btn" id="start-new-game">Aloita Uusi Peli</button>
+    </section>
+  </body>
+</html>
