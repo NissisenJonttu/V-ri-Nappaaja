@@ -129,15 +129,15 @@ function myLoop() {
   //  create a loop function
   setTimeout(function () {
     //  call a 3s setTimeout when the loop is called
-    let rndMilliSeconds1 = Math.floor(Math.random() * 6000) + 2000;
-    let rndMilliSeconds2 = Math.floor(Math.random() * 6000) + 2000;
-    let rndMilliSeconds3 = Math.floor(Math.random() * 6000) + 2000;
-    let rndMilliSeconds4 = Math.floor(Math.random() * 6000) + 2000;
-    let rndMilliSeconds5 = Math.floor(Math.random() * 6000) + 2000;
-    let rndMilliSeconds6 = Math.floor(Math.random() * 6000) + 2000;
-    let rndMilliSeconds7 = Math.floor(Math.random() * 6000) + 2000;
-    let rndMilliSeconds8 = Math.floor(Math.random() * 6000) + 2000;
-    let rndMilliSeconds9 = Math.floor(Math.random() * 6000) + 2000;
+    let rndMilliSeconds1 = Math.floor(Math.random() * 4000) + 2000;
+    let rndMilliSeconds2 = Math.floor(Math.random() * 4000) + 2000;
+    let rndMilliSeconds3 = Math.floor(Math.random() * 4000) + 2000;
+    let rndMilliSeconds4 = Math.floor(Math.random() * 4000) + 2000;
+    let rndMilliSeconds5 = Math.floor(Math.random() * 4000) + 2000;
+    let rndMilliSeconds6 = Math.floor(Math.random() * 4000) + 2000;
+    let rndMilliSeconds7 = Math.floor(Math.random() * 4000) + 2000;
+    let rndMilliSeconds8 = Math.floor(Math.random() * 4000) + 2000;
+    let rndMilliSeconds9 = Math.floor(Math.random() * 4000) + 2000;
 
     setTimeout(changeColor1, rndMilliSeconds1);
     setTimeout(changeColor2, rndMilliSeconds2);
